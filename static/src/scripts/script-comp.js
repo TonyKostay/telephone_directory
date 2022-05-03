@@ -6,5 +6,5 @@ document.addEventListener('click',(event)=>{
         document.querySelectorAll('.tab').forEach((element)=>{
             element.nextElementSibling.className = 'tab__list-off';
             });
-        };
+        }
     });

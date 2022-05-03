@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="src/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="src/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="src/css/style.min.css">
-    <title>Структура</title>
+    <title>Редактировать</title>
 </head>
 <body>
     <header class="main-header">
@@ -28,21 +28,18 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <section class="tab">
-                        <h2 class="tab__header">Организация 1</h2>
-                        <a href="index.html"><img class="settings" src="src/img/Settings.svg" alt=""></a> 
-                    </section>
-                    <aside class="tab__list-off">
-                        <ul>
-                            <li class="tab__list-item"><span>Подразделение 1</span><img class="settings" src="src/img/Settings.svg" alt=""></li>
-                            <li class="tab__list-item"> <span>Подразделение 2</span><img class="settings" src="src/img/Settings.svg" alt=""></li>
-                        </ul>
-                    </aside>
-
+                <div class="col-md-3">
+                    <div  style="background-color:rgb(41, 84, 121); width: 100%; height: 100px;"></div>
+                </div>
+                <div class="col-md-9">
+                    <form class="edit-property " action="">
+                        <input style='width:100%' type="text" class="style-input">
+                        <select style='width:100%' name="" id=""></select>
+                        <button class="main-buttons">Обновить</button>
+                    </form>
                 </div>
             </div>
-        </div>
+        </div>  
     </main>
     <footer>
         <div class="container">
@@ -51,7 +48,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="src/scripts/script-comp.js"></script>
+    
 </body>
 </html>

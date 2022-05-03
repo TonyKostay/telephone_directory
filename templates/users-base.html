@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='src/css/bootstrap-grid.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='src/css/bootstrap-reboot.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='src/css/style.min.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="{{ url_for('static', filename='src/img/logo.svg') }}" alt="">
+                </div>
+                <div class="col-md-3 offset-md-2">
+                    <input class="search-users-form style-input" type="text" name="search" placeholder="поиск" form="search-users-base">
+                </div>
+                <div class="col-md-2">
+                    <form action="{{action}}" id="search-users-base" method="POST">
+                        <select name="" id="" class="search-users-form">
+                            <option value="all">Все</option>
+                            <option value="name">ФИО</option>
+                            <option value="number">Номер</option>
+                            <option value="email">Почта</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="col-md-2">
+                    <button form="search-users-base" class="main-buttons search-users-form" name="btn" value="true">Найти</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <form style="margin-top: 2vh;" class="composition-filter" action="">
+                        <ul>
+                            <li class="composition-filter__item"><img src="{{ url_for('static', filename='src/img/arrow.svg')}}" alt=""> <input class="radio" type="radio" name="comp-choice"  id="12"><label for="12">Администрация Волгограда</label></li>
+                            <li class="composition-filter__item"><img src="{{ url_for('static', filename='src/img/arrow.svg')}}" alt=""><input class="radio" type="radio" name="comp-choice" id="1"><label for="1">Адмия</label></li>
+                            <li class="composition-filter__item"><input class="radio" type="radio" name="comp-choice" id="2"><label for="2">Адмия</label></li>  
+                        </ul>
+                        <button class='composition-filter__button main-buttons'type="submit">Показать</button>
+                    </form>
+                </div>
+                <div class="col-md-8">
+                    <table class="table-users">
+                        <tr class="table-users__row-header">
+                            <th class="table-users__header">ФИО</th>
+                            <th class="table-users__header">Должность</th>
+                            <th class="table-users__header">Номер</th>
+                            <th class="table-users__header">Почта</th>
+                        </tr>
+                     {% for row in rows %}
+                        <tr class="table-users__row">
+                            <td class="table-users__item">{{ row.name.title() }}</td>
+                            <td class="table-users__item">{{ row.position.title() }}</td>
+                            <td class="table-users__item">{{ row.number }}</td>
+                            <td class="table-users__item">{{ row.email }}</td>
+                        </tr>
+                    {% endfor %}
+                    </table>
+                </div>
+                <div class="col-md-1">
+                    <a href="/" class="back on">Назад</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="src/scripts/script.js"></script>
+</body>
+</html>
