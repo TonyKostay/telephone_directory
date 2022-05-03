@@ -1,4 +1,4 @@
-const icon_setting = document.querySelector('.admin img')
+const icon_setting = document.querySelector('.admin img');
 const btn_admin = document.querySelector('.admin');
 const btn_user = document.querySelector('.user');
 const form = document.querySelector('.admin-form-off');

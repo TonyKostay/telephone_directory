@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="src/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="src/css/style.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='src/css/bootstrap-grid.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='src/css/bootstrap-reboot.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='src/css/style.min.css') }}">
     <title>Document</title>
 </head>
 <body>
@@ -14,12 +14,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <img src="src/img/logo.svg" alt="">
+                    <img src="{{ url_for('static', filename='src/img/logo.svg') }}" alt="">
                 </div>
                 <div class="col-md-3 offset-md-6">
                     <div class="main-header_wrapper-subheader">
                         <span class="subheader">Администратор</span>
-                        <img src="src/img/Settings.svg" width='48px' alt="">
+                        <img src="{{ url_for('static', filename='src/img/Settings.svg')}}" width='48px' alt="">
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                 <div class="col-md-4 offset-md-2">
                     <div class="plate composition">
                         <div class="plate__wrapper">
-                            <img class="plate__animate-icon" src="src/img/connection.svg" alt="composition.html">
+                            <img class="plate__animate-icon" src="{{ url_for('static', filename='src/img/connection.svg')}}" alt="composition">
                             <span>Структура</span>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                 <div class="col-md-4">
                     <div class="plate staff">
                         <div class="plate__wrapper">
-                            <img class="plate__animate-icon" src="src/img/Edit.svg" alt="admin.html">
+                            <img class="plate__animate-icon" src="{{ url_for('static', filename='src/img/Edit.svg')}}" alt="admin">
                             <span>Сотрудники</span>
                         </div>
                     </div >
@@ -50,10 +50,10 @@
     <footer>
         <div class="container">
             <div class="col-md-1">
-                <a href="index.html" class="back on">Назад</a>
+                <a href="/" class="back on">Назад</a>
             </div>
         </div>
     </footer>
-    <script src="src/scripts/script-animate_plates.js"></script>
+    <script src="{{ url_for('static', filename='src/scripts/script-animate_plates.js')}}"></script>
 </body>
 </html>
